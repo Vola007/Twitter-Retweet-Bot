@@ -12,7 +12,7 @@ bot_id = int(api.me().id_str)
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, tweet):
         print("Tweet Found!")
-        print(f"TWEET: {tweet.author.screen_name} - {tweet.text}")
+        print(f"TWEET: {tweet.author.screen_name} - {$PARAM}")
         if tweet.author.id != bot_id and tweet.in_reply_to_status_id is None:
             if not tweet.retweeted:
                 try:
